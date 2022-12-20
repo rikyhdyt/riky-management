@@ -15,7 +15,7 @@ export class StorageService {
     return localStorage.getItem(key);
   }
 
-  checkkey(key:string):boolean{
+  check(key:string):boolean{
     if(localStorage.getItem(key)){
       return true;
     }
@@ -23,6 +23,6 @@ export class StorageService {
   }
 
   clear(key:string){
-    localStorage.setItem(key,"");
+    localStorage.removeItem(key);
   }
 }
