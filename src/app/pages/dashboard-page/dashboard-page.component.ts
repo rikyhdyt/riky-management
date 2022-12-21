@@ -10,7 +10,7 @@ export class DashboardPageComponent implements OnInit{
   daftarFitur:any = [{
     "title": "Product Management",
     "image": "https://picsum.photos/200/90?random=3",
-    "link":""
+    "link":"/product"
   }, 
   {
     "title": "User Management",

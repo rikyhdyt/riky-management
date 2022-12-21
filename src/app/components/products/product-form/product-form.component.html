@@ -1,0 +1,64 @@
+<div class="card shadow">
+    <h5 class="card-header" *ngIf="!product.id">Tambah Product</h5>
+    <h5 class="card-header" *ngIf="product.id">{{product.title}}</h5>
+    <ul *ngIf="!isConfirmDelete" class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="mb-3">
+                <div class="form-label">Title</div>
+                <input type="text" class="form-control" [(ngModel)]="product.title"/>
+            </div>
+            <div class="mb-3">
+                <div class="form-label">Description</div>
+                <textarea class="form-control" [(ngModel)]="product.description"></textarea>
+            </div>
+            <div class="mb-3">
+                <div class="form-label">Price</div>
+                <input type="number" class="form-control" [(ngModel)]="product.price"/>
+            </div>
+        </li>
+
+        <li (click)="showToggle()" *ngIf="!showMore" class="list-group-item"><strong>More</strong> 
+         
+        <li (click)="showToggle()" *ngIf="showMore" class="list-group-item"><strong>Hide... </strong></li>
+            <li *ngIf="showMore" class="list-group-item">
+                <div class="mb-3 mt-3">
+                    <div class="form-label">Discount</div>
+                    <input type="number" class="form-control" [(ngModel)]="product.discountPercentage"/>
+                </div>
+                <div class="mb-3">
+                    <div class="form-label">Stock</div>
+                    <input type="number" class="form-control" [(ngModel)]="product.stock" />
+                </div>
+                <div class="mb-3">
+                    <div class="form-label">Brand</div>
+                    <input type="text" class="form-control" [(ngModel)]="product.brand" />
+                </div>
+            </li>
+            
+        <li class="list-group-item" *ngIf="!product.id">
+            <div class="mb-3 mt-3">
+                <button (click)="onCreate()" class="btn btn-primary"><i class="bi bi-save-fill"></i> Simpan</button>
+            </div>
+        </li>
+
+        <li class="list-group-item" *ngIf="product.id">
+            <div class="btn-group mt-3 mb-3" role="group" aria-label="Basic mixed styles example">
+                <button (click)="onUpdate()" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Ubah</button>
+                <button (click)="isConfirmDelete=true" class="btn btn-danger"><i class="bi bi-trash3-fill"></i> Delete</button>
+                <button (click)="cancel()" class="btn btn-secondary"><i class="bi bi-x-square-fill"></i> Cancel</button>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="list-group list-group-flush" *ngIf="product && isConfirmDelete">
+        <li class="list-group-item">
+            Anda yakin ingin menghapus data <strong>{{product.title}}</strong>
+        </li>
+        <li class="list-group-item">
+            <div class="btn-group mt-3 mb-3" role="group" aria-label="Basic mixed styles example">
+                <button (click)="onDelete()" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Yes</button>
+                <button (click)="isConfirmDelete=false" class="btn btn-danger"><i class="bi bi-trash3-fill"></i> No</button>
+            </div>
+        </li>
+    </ul>
+</div>
