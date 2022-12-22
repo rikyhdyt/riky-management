@@ -1,0 +1,17 @@
+div.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-container{
+    background-color: rgb(231, 231, 231);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px gray;
+    text-align: center;
+}
+
+.qr{
+    margin-bottom: 20px;
+}

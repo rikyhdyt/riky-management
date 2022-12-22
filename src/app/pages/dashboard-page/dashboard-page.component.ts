@@ -31,6 +31,11 @@ export class DashboardPageComponent implements OnInit{
     "title": "Content Management",
     "image": "https://picsum.photos/200/90?random=5",
     "link":""
+  },
+  {
+    "title": "QR Generator",
+    "image": "https://picsum.photos/200/90?random=5",
+    "link":"/qrgen"
   }]
 
   constructor(){}

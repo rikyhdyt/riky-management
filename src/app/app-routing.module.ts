@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ProductListComponent } from './pages/product-list/product-list.component';
+import { QrgenComponent } from './pages/qrgen/qrgen.component';
 import { UserListComponent } from './pages/user-list/user-list.component';
 import { AuthGuardService } from './services/auth-guard.service';
 
@@ -24,6 +25,11 @@ const routes: Routes = [
   {
     path:'user',
     component:UserListComponent,
+    canActivate:[AuthGuardService]
+  },
+  {
+    path:'qrgen',
+    component:QrgenComponent,
     canActivate:[AuthGuardService]
   },
   {

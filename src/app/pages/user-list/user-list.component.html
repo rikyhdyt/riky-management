@@ -24,6 +24,7 @@
                                 <th>Gender</th>
                                 <th>Email</th>
                                 <th>Birth date</th>
+                                <th>Code</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -33,6 +34,7 @@
                                 <td>{{u.gender}}</td>
                                 <td>{{u.email}}</td>
                                 <td>{{u.birthDate}}</td>
+                                <td><qr-code [value]="'https://www.freakyjolly.com/'"></qr-code></td>
                             </tr>
                         </tbody>
                     </table>
