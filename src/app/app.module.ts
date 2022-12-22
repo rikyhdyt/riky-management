@@ -14,6 +14,8 @@ import { ProductListComponent } from './pages/product-list/product-list.componen
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { ToasterComponent } from './components/toaster/toaster.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserFormComponent } from './components/user/user-form/user-form.component';
+import { UserListComponent } from './pages/user-list/user-list.component';
 
 
 
@@ -27,7 +29,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductListComponent,
     ProductDetailComponent,
     ProductFormComponent,
-    ToasterComponent
+    ToasterComponent,
+    UserFormComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
