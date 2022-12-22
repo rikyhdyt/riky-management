@@ -13,6 +13,10 @@ import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.co
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { ToasterComponent } from './components/toaster/toaster.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import { ToasterComponent } from './components/toaster/toaster.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

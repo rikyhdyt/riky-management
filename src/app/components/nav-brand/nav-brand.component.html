@@ -1,7 +1,9 @@
 <nav class="navbar navbar-dark bg-dark mb-4">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="https://icons.iconarchive.com/icons/thesquid.ink/free-flat-sample/128/space-rocket-icon.png" alt="logo" width="50" height="50"> Rocketer</a>
-      
+      <div *ngIf="isLoggedin()" class="d-flex">
+        <button (click)="onLogout()" type="button" class="btn btn-outline-light"><i class="bi bi-box-arrow-left"></i> Logout</button>
+      </div>
     </div>
   </nav>
   
